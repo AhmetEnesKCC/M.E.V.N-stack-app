@@ -87,7 +87,6 @@ import Axios from "axios";
 export default Vue.extend({
   name: "App",
 
-
   data: () => ({
     input: "",
     index : [],
@@ -95,8 +94,7 @@ export default Vue.extend({
 
     },
     tabType: "tab",
-
-    todos: [],
+    todos : Array,
     tabsTitles: {
       1: {
         text: "Todos",
@@ -115,7 +113,7 @@ export default Vue.extend({
     //
   }),
   mounted() {
-    Axios.get("/todos").then(res => this.todos = [...res.data])
+    Axios.get("/todos").then(res =>  this.todos = [...res.data])
   },
   updated() {
     Axios.get("/todos").then(res => this.todos = [...res.data])
@@ -137,19 +135,19 @@ export default Vue.extend({
         completed: param.completed,
       })
     },
-    updateCompleted: function (param) {
+    updateCompleted: function (param :any) {
       Axios.put(`/todos/update/${param._id}`, {
         todo: param.todo,
         completed: !param.completed
       })
     },
-    updateTodo : function (param) {
+    updateTodo : function (param : any) {
       Axios.put("/todos/update/" + param._id, {
         todo : this.index[param._id],
         completed : false
       })
     },
-    log : function (param) {
+    log : function (param : any) {
       console.log(param)
     }
   },
