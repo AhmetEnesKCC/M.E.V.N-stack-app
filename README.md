@@ -1,24 +1,11 @@
-# mevn-stack-app
+M.E.V.N stack TODO App
 
-## Project setup
-```
-npm install
-```
+used listed below --->
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+○ MongoDB Atlas
+○ Vuetify
+○ Heroku app deploy
+○ Font awesome - 5 
+○ Express JS
+○ Insomnia ( for testing api endpoints )
+○ Type Script ( basic )
