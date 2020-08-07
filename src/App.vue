@@ -94,7 +94,7 @@ export default Vue.extend({
 
     },
     tabType: "tab",
-    todos : Array,
+    todos : <Array>[],
     tabsTitles: {
       1: {
         text: "Todos",
